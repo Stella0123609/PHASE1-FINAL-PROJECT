@@ -144,42 +144,42 @@ function generateRecommendations(bodyShape = 'rectangle') {
             name: 'Slim Fit Shirt',
             description: 'Perfect for rectangle body types',
             price: '$49.99',
-            image: 'https://source.unsplash.com/random/300x300/?shirt'
+            image: 'images/woman-8188294_1280.jpg'
         },
         {
             id: 2,
             name: 'Tailored Pants',
             description: 'Designed to complement your shape',
             price: '$59.99',
-            image: 'https://source.unsplash.com/random/300x300/?pants'
+            image: 'images/matas-katinas-7ITfJfAxxY4-unsplash.jpg'
         },
         {
             id: 3,
             name: 'Fitted Blazer',
             description: 'Enhances your silhouette',
             price: '$89.99',
-            image: 'https://source.unsplash.com/random/300x300/?blazer'
+            image: 'images/man-9402793_1280.jpg'
         },
         {
             id: 4,
             name: 'Stylish Jeans',
             description: 'Comfortable and fashionable',
             price: '$39.99',
-            image: 'https://source.unsplash.com/random/300x300/?jeans'
+            image: 'images/denim-5138278_1280.jpg'
         },
         {
             id: 5,
             name: 'Casual T-Shirt',
             description: 'Great for everyday wear',
             price: '$24.99',
-            image: 'https://source.unsplash.com/random/300x300/?tshirt'
+            image: 'images/anomaly-WWesmHEgXDs-unsplash.jpg'
         },
         {
             id: 6,
             name: 'Formal Dress',
             description: 'Elegant and sophisticated',
             price: '$79.99',
-            image: 'https://source.unsplash.com/random/300x300/?dress'
+            image: 'images/adriano-goncalves-IeHLttCrsXE-unsplash.jpg'
         }
     ];
     
