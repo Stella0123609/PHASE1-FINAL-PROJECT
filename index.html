@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Try-On & Smart Sizing</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/sttyles.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-header">
+            <img src="" alt="">
+            <h3>Welcome Back!</h3>
+        </div>
+        <ul class="menu-content">
+            <li><a href="#"><span class="material-icons">home</span><span>Home</span></a></li>
+            <li><a href="#"><span class="material-icons">explore</span><span>Explore</span></a></li>
+            <li><a href="#"><span class="material-icons">analytics</span><span>Analytics</span></a></li>
+            <li><a href="#"><span class="material-icons">settings</span><span>Settings</span></a></li>
+            <li><a href="#"><span class="material-icons">person</span><span>Account</span></a></li>
+            <li><a href="#"><span class="material-icons">report</span><span>Report</span></a></li>
+            <li><a href="#"><span class="material-icons">email</span><span>Contact</span></a></li>
+            <li class="logout"><a href="#"><span class="material-icons">logout</span><span>Logout</span></a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <header class="main-header">
+            <h1>Virtual Try-On & Smart Sizing Recommendation</h1>
+            <p class="subtitle">Experience fashion like never before with our AI-powered virtual fitting room</p>
+        </header>
+
+        <div class="user-profile card">
+            <div class="card-header">
+                <h2><span class="material-icons">person</span> User Profile</h2>
+            </div>
+            <form id="userProfileForm">
+                <div class="form-group">
+                    <label for="height">Height (cm):</label>
+                    <input type="number" id="height" required>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" id="weight" required>
+                </div>
+                <div class="form-group">
+                    <label for="bodyShape">Body Shape:</label>
+                    <select id="bodyShape" required>
+                        <option value="">Select</option>
+                        <option value="rectangle">Rectangle</option>
+                        <option value="pear">Pear</option>
+                        <option value="apple">Apple</option>
+                        <option value="hourglass">Hourglass</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <span class="material-icons">save</span> Save Profile
+                </button>
+            </form>
+        </div>
+
+        <div class="virtual-try-on card">
+            <div class="card-header">
+                <h2><span class="material-icons">checkroom</span> Virtual Try-On</h2>
+            </div>
+            <div class="try-on-container">
+                <div class="upload-area" id="uploadArea">
+                    <span class="material-icons">cloud_upload</span>
+                    <p>Drag & drop your image here or click to browse</p>
+                    <input type="file" id="uploadImage" accept="image/*">
+                </div>
+                <button id="tryOnButton" class="btn-primary">
+                    <span class="material-icons">visibility</span> Try On
+                </button>
+                <div class="loading-spinner" id="loadingSpinner"></div>
+                <div id="tryOnResult" class="try-on-result"></div>
+            </div>
+        </div>
+
+        <div class="clothing-section card">
+            <div class="card-header">
+                <h2><span class="material-icons">shopping_bag</span> Shop by Category</h2>
+            </div>
+            <div class="clothing-category">
+                <div class="category-item">
+                    <div class="category-image">
+                        <img src="" alt="Men's Clothing">
+                        <div class="overlay">
+                            <button class="category-button">Shop Now</button>
+                        </div>
+                    </div>
+                    <h3>Men's Clothing</h3>
+                    <p>Explore our latest collection of men's fashion.</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-image">
+                        <img src="" alt="Women's Clothing">
+                        <div class="overlay">
+                            <button class="category-button">Shop Now</button>
+                        </div>
+                    </div>
+                    <h3>Women's Clothing</h3>
+                    <p>Discover the latest trends in women's fashion.</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-image">
+                        <img src="" alt="Kids' Clothing">
+                        <div class="overlay">
+                            <button class="category-button">Shop Now</button>
+                        </div>
+                    </div>
+                    <h3>Kids' Clothing</h3>
+                    <p>Find stylish and comfortable clothes for kids.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommendations card">
+            <div class="card-header">
+                <h2><span class="material-icons">star</span> Recommended For You</h2>
+            </div>
+            <div class="recommendation-grid" id="recommendationGrid">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
