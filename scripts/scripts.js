@@ -66,3 +66,25 @@ document.addEventListener('DOMContentLoaded', function() {
              return;
          }
         } ) 
+        etTimeout(() => {
+            loadingSpinner.style.display = 'none';
+            tryOnButton.disabled = false;
+            
+            const resultContainer = document.createElement('div');
+            resultContainer.className = 'try-on-comparison';
+            
+            const originalImg = document.createElement('img');
+            originalImg.src = URL.createObjectURL(uploadInput.files[0]);
+            originalImg.alt = 'Original Image';
+            
+            const resultImg = document.createElement('img');
+        
+            resultImg.src = 'images/dom-hill-nimElTcTNyY-unsplash.jpg';
+            resultImg.alt = 'Virtual Try-On Result';
+            
+            resultContainer.appendChild(originalImg);
+            resultContainer.appendChild(resultImg);
+            tryOnResult.appendChild(resultContainer);
+            
+            showNotification('Virtual try-on completed!', 'success');
+        }, 3000);
